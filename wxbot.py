@@ -547,6 +547,8 @@ class WXBot:
             name = self.get_contact_prefer_name(self.get_contact_name(uid))
             if not name:
                 name = self.get_group_member_prefer_name(self.get_group_member_name(msg['FromUserName'], uid))
+                if name == '六色飞天尴尬鼠':
+                    print '六色飞天尴尬鼠======'
             if not name:
                 name = 'unknown'
             msg_content['user'] = {'id': uid, 'name': name}

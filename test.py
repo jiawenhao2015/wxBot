@@ -11,6 +11,9 @@ class MyWXBot(WXBot):
             self.send_msg_by_uid(u'hi', msg['user']['id'])
             #self.send_img_msg_by_uid("img/1.png", msg['user']['id'])
             #self.send_file_msg_by_uid("img/1.png", msg['user']['id'])
+        elif msg['msg_type_id'] == 3 and msg['content']['type'] == 0:#群消息 文本 想找到特定群
+            print "group----------"
+            #print group_list[msg['to_user_id']]
 '''
     def schedule(self):
         self.send_msg(u'李四', u'测试')
